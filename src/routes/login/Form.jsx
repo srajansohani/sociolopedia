@@ -114,6 +114,13 @@ function Form() {
                                 error={Boolean(touched.occupation) && Boolean(errors.occupation)}
                                 helperText={touched.occupation && errors.occupation}
                                 sx={{gridColumn: "span 4"}} />
+
+                                <Box
+                                 gridColumn="span 4"
+                                 border={`1px solid ${palette}`}
+                                >
+
+                                </Box>
                         </>
                     )}
                 </Box>
