@@ -28,6 +28,7 @@ function Login() {
             Welcome to socialpedia, the social media for sociopath
         </Typography>
         </Box>
+        <Form />
         </Box>
     )
 }
