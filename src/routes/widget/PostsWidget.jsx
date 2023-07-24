@@ -9,7 +9,7 @@ function PostsWidget({ userId, isProfile = false }) {
   const posts = useSelector((state) => state.posts);
   const dispatch = useDispatch();
   const getPosts = async () => {
-    const res = await fetch("http://localhost:3001/posts", {
+    const res = await fetch(process.env.REACT_APP_BASE_URL + "/posts", {
       method: "GET",
       headers: { Authorization: `Bearer ${token}` },
     });
@@ -17,7 +17,7 @@ function PostsWidget({ userId, isProfile = false }) {
     dispatch(setPosts({ posts: data }));
   };
   const getUserPosts = async () => {
-    const res = await fetch("http://localhost:3001/~${userId}/posts", {
+    const res = await fetch(process.env.REACT_APP_BASE_URL + "~${userId}/posts", {
       method: "GET",
       headers: { Authorization: `Bearer ${token}` },
     });

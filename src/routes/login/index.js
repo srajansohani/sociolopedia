@@ -14,8 +14,9 @@ function Login() {
              fontWeight="bold"
              fontSize="32px"
              color="primary"
+             onClick={()=>{console.log(process.env)}}
             >
-                Sociopedia
+                Sociopedia + {process.env.REACT_APP_BASE_URL}
             </Typography> 
         <Box
           width={isNonMobileScreen ? "50%" : "93%"}
